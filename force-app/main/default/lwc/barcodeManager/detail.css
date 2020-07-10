@@ -1,0 +1,14 @@
+.nav-header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.nav-button {
+    flex: 25%;
+}
+.nav-title {
+    flex: 50%;
+}
+.right {
+    text-align: right;
+}

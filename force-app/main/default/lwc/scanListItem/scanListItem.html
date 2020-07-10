@@ -1,0 +1,11 @@
+<template>
+    <template if:true={isFirstItem}>
+        <div class="page-bottom gray-border"></div>
+    </template>
+    <p>Scan {item.id}</p>
+    <p>Name: {item.name}</p>
+    <p>Description: {item.description}</p>
+    <p>Quantity: {item.quantity}</p>
+    <p>Barcode Info: {item.barcode}</p>
+    <div class="page-top gray-border"></div>
+</template>

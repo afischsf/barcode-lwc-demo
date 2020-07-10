@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.center {
+    text-align: center;
+    flex: 0.2;
+}
+.gray-border {
+    border: 1pt solid gray;
+}
+.no-bullets {
+    list-style-type: none;
+    padding-left: 0;
+}
+ul {
+    overflow-x: auto;
+}
+.buttons {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+.button {
+    flex: 0.5;
+}

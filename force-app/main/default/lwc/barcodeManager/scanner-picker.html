@@ -1,0 +1,16 @@
+<template>
+    <c-controls settings-data={settingData}></c-controls>
+    <div class="center">
+        <div class="slds-text-heading_large">Barcode Scanner</div>
+        <div class="slds-text-body_regular">Add barcodes to new or existing records in just a few seconds</div>
+        <div class="slds-text-body_small grey-text">Which barcode scanner would you like to use?</div>
+    </div>
+    <div class="center">
+        <div>
+            <lightning-button label="Single Item Scan" name="single" onclick={switchTemplate} value="2" class="slds-m-left_x-small">Single Item Scan</lightning-button>
+        </div>
+        <div>
+            <lightning-button label="Multiple Item Scan" onclick={switchTemplate} value="3" class="slds-m-left_x-small">Multiple Item Scan</lightning-button>
+        </div>
+    </div>
+</template>

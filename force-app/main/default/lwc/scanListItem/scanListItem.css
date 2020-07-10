@@ -1,0 +1,13 @@
+.page-bottom {
+    width: 100%;
+}
+.page-top {
+    width: 100%;
+}
+.gray-border {
+    border: 1pt solid lightgray;
+}
+p {
+    margin: 0px;
+    padding: 0px;
+}

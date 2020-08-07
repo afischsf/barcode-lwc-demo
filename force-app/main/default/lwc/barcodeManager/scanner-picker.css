@@ -1,6 +1,33 @@
 .center {
     text-align: center;
+    background-color: white !important;
 }
-.grey-text{
-    color: darkgrey;
+.splash {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
+    margin-top: 44px;
+    margin-bottom: 44px;
+}
+.large-text {
+    font-size: 32px;
+    color: #2b2826;
+}
+.medium-text {
+    color: #2b2826;
+    padding-bottom: 12px;
+    font-size: 18px;
+}
+.small-text {
+    color: #706e6b;
+    margin-bottom: 44px;
+    font-size: 14px;
+}
+.container {
+    background-color: white !important;
+    padding-bottom: 12px;
+}
+.clear-it {
+    clear: both;
 }

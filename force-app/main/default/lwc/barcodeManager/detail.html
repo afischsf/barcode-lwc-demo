@@ -5,8 +5,10 @@
         <lightning-button label="Save" variant="base" onclick={savePressed} class="slds-m-left_small nav-button right"></lightning-button>
     </div>
 
-    <lightning-input type="text" name="name" label="Name" value={detail.name} onchange={textInputChange}></lightning-input>
-    <lightning-input type="text" name="description" label="Description" value={detail.description} onchange={textInputChange}></lightning-input>
-    <lightning-input type="text" name="quantity" label="Quantity" value={detail.quantity} onchange={textInputChange}></lightning-input>
-    <lightning-input type="text" name="barcode" label="Barcode Info" value={detail.barcode} onchange={textInputChange}></lightning-input>
+    <div class="detail-container">
+        <lightning-input class="detail-padding" type="text" name="name" label="Name" value={detail.name} onchange={textInputChange}></lightning-input>
+        <lightning-input class="detail-padding" type="text" name="description" label="Description" value={detail.description} onchange={textInputChange}></lightning-input>
+        <lightning-input class="detail-padding" type="text" name="quantity" label="Quantity" value={detail.quantity} onchange={textInputChange}></lightning-input>
+        <lightning-input class="detail-padding" type="text" name="barcode" label="Barcode Info" value={detail.barcode} onchange={textInputChange}></lightning-input>
+    </div>
 </template>

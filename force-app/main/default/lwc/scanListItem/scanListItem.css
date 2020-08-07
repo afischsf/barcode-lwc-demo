@@ -8,6 +8,23 @@
     border: 1pt solid lightgray;
 }
 p {
-    margin: 0px;
+    margin: 2px;
     padding: 0px;
+}
+.cell-text-box-text {
+    color: #706e6b;
+}
+.delete-image {
+    width: 25px;
+    text-align: right;
+    padding-right: 4%;
+}
+.first-col {
+    width: 20%;
+    padding-left: 12px;
+    white-space: nowrap;
+    padding-right: 12px;
+}
+.last-row {
+    padding-bottom: 12px;
 }

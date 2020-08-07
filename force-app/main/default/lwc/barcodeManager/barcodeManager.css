@@ -1,7 +1,8 @@
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    background-color: #FFFFFF;
+    overflow-y: auto;
 }
 .center {
     text-align: center;
@@ -15,13 +16,10 @@
     padding-left: 0;
 }
 ul {
-    overflow-x: auto;
+    overflow-y: auto;
 }
 .buttons {
     margin-top: auto;
     display: flex;
     flex-direction: column;
-}
-.button {
-    flex: 0.5;
 }

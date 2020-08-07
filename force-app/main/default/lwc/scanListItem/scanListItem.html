@@ -1,11 +1,34 @@
 <template>
     <template if:true={isFirstItem}>
-        <div class="page-bottom gray-border"></div>
+        <div class="page-top gray-border"></div>
     </template>
-    <p>Scan {item.id}</p>
-    <p>Name: {item.name}</p>
-    <p>Description: {item.description}</p>
-    <p>Quantity: {item.quantity}</p>
-    <p>Barcode Info: {item.barcode}</p>
-    <div class="page-top gray-border"></div>
+    <div>
+        <table onclick={cellTapped}>
+            <tr>
+                <td class="slds-text-heading_small" style="padding: 12px;" colspan="2">
+                    Scan {item.id}
+                </td>
+            </tr>
+            <tr>
+                <td class="first-col">Name:</td>
+                <td>{item.name}</td>
+                <td rowspan="2" class="delete-image">
+                    <lightning-icon icon-name="utility:delete" alternative-text="Delete" onclick={deleteItem} title="Delete" size="small"></lightning-icon>
+                </td>
+            </tr>
+            <tr>
+                <td class="first-col">Description:</td>
+                <td>{item.description}</td>
+            </tr>
+            <tr>
+                <td class="first-col">Quantity:</td>
+                <td>{item.quantity}</td>
+            </tr>
+            <tr>
+                <td class="first-col last-row">Barcode Info:</td>
+                <td class="last-row">{item.barcode}</td>
+            </tr>
+          </table>
+    </div>
+    <div class="page-bottom gray-border"></div>
 </template>

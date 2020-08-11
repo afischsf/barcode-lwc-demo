@@ -1,10 +1,22 @@
 <template>
     <table>
         <tr>
-            <td>
-                {setting.name}
+            <td colspan="2">
+                <div style="white-space: nowrap;" class="slds-text-heading_small">
+                    {setting.name}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-top: 0;">
+                <div class="barcode-image">
+                    <img src={setting.image}/>
+                </div>
             </td>
             <td>
+                <p>{setting.description}</p>
+            </td>
+            <td rowspan="2" style="width: 1%;">
                 <lightning-input 
                     type="toggle"
                     label=""
@@ -15,5 +27,6 @@
             </td>
         </tr>
     </table>
+
     <div class="gray-border"></div>
 </template>

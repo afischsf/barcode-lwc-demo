@@ -1,11 +1,3 @@
-:host {
-    padding-right: 24px;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 78px;
-    z-index: 120;
-}
 .no-bullets {
     list-style-type: none;
     padding-left: 0;

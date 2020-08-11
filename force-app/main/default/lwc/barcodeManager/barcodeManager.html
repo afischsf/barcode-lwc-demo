@@ -1,38 +1,40 @@
 <template>
-    <div class="container">
-        <c-controls onshowsettingsclick={settingsButtonPressed}></c-controls>
-        <p class="slds-text-heading_large" style="margin: 12px">My Scans</p>
-        <lightning-tabset active-tab-value={selectedTab}>
-                <lightning-tab label="Single Scans" value="single">
-                    <ul class="no-bullets">
-                        <template iterator:it={singleScanRecords}>
-                            <li key={it.value.id}>
-                                <c-scan-list-item scan-type="single" item={it.value} is-first-item={it.first} onitemclick={viewDetail} ondeleteitemclick={deleteDetail}></c-scan-list-item>
-                            </li>
-                        </template>
-                    </ul>
-                </lightning-tab>
-                <lightning-tab label="Multi Scans" value="multi">
-                    <ul class="no-bullets">
-                        <template iterator:it={multipleScanRecords}>
-                            <li key={it.value.id}>
-                                <c-scan-list-item scan-type="multi" item={it.value} is-first-item={it.first} onitemclick={viewDetail} ondeleteitemclick={deleteDetail}></c-scan-list-item>
-                            </li>
-                        </template>
-                    </ul>
-                </lightning-tab>
-        </lightning-tabset>
-        <div class="center buttons" style="background-color: #FFFFFF; padding-bottom: 12px;">
-            <div style="margin-bottom: 12px;">
-                <lightning-button label="Single Item Scan" onclick={openSingleScan} class="slds-m-left_x-small flextest">Single Item Scan</lightning-button>
-            </div>
-            <div>
-                <lightning-button label="Multiple Item Scan" onclick={openMultiScan} class="slds-m-left_x-small">Multiple Item Scan</lightning-button>
+    <template if:false={showSettings}>
+        <div class="container">
+            <c-controls onshowsettingsclick={settingsButtonPressed}></c-controls>
+            <p class="slds-text-heading_large" style="margin: 12px">My Scans</p>
+            <lightning-tabset active-tab-value={selectedTab}>
+                    <lightning-tab label="Single Scans" value="single">
+                        <ul class="no-bullets">
+                            <template iterator:it={singleScanRecords}>
+                                <li key={it.value.id}>
+                                    <c-scan-list-item scan-type="single" item={it.value} is-first-item={it.first} onitemclick={viewDetail} ondeleteitemclick={deleteDetail}></c-scan-list-item>
+                                </li>
+                            </template>
+                        </ul>
+                    </lightning-tab>
+                    <lightning-tab label="Multi Scans" value="multi">
+                        <ul class="no-bullets">
+                            <template iterator:it={multipleScanRecords}>
+                                <li key={it.value.id}>
+                                    <c-scan-list-item scan-type="multi" item={it.value} is-first-item={it.first} onitemclick={viewDetail} ondeleteitemclick={deleteDetail}></c-scan-list-item>
+                                </li>
+                            </template>
+                        </ul>
+                    </lightning-tab>
+            </lightning-tabset>
+            <div class="center buttons" style="background-color: #FFFFFF; padding-bottom: 12px;">
+                <div style="margin-bottom: 12px;">
+                    <lightning-button label="Single Item Scan" onclick={openSingleScan} class="slds-m-left_x-small flextest">Single Item Scan</lightning-button>
+                </div>
+                <div>
+                    <lightning-button label="Multiple Item Scan" onclick={openMultiScan} class="slds-m-left_x-small">Multiple Item Scan</lightning-button>
+                </div>
             </div>
         </div>
+    </template>
 
-        <template if:true={showSettings}>
-            <c-scanner-settings settings={settings} onbackbuttonclick={settingsBackPressed} onsettingtoggled={settingToggled}></c-scanner-settings>
-        </template>
-    </div>
+    <template if:true={showSettings}>
+        <c-scanner-settings settings={settings} onbackbuttonclick={settingsBackPressed} onsettingtoggled={settingToggled}></c-scanner-settings>
+    </template>
 </template>

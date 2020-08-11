@@ -27,6 +27,7 @@
 .container {
     background-color: white !important;
     padding-bottom: 12px;
+    position: relative;
 }
 .clear-it {
     clear: both;

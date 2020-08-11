@@ -199,80 +199,75 @@ export default class NimbusBarcodeScanner extends LightningElement {
         .map((item) => item.type);
     }
 
-    get testing() {
-        let blah = { barcodeTypes: this.selectedBarcodeTypes() };
-        return JSON.stringify(blah);
-    }
-
     settings = [
         {
             name: "QR Code",
             type: "qr",
-            image: "",
-            description: "",
+            image: `${resources}/barcodeScannerResource/qr.jpg`,
+            description: "This symbol can withstand damage without causing loss of data.",
             checked: true
         },
         {
             name: "Code 39",
             type: "code39",
-            image: "",
-            description: "",
+            image: `${resources}/barcodeScannerResource/code39.jpg`,
+            description: "This symbol can withstand damage without causing loss of data.",
             checked: true
         },
         {
             name: "Code 93",
             type: "code93",
-            image: "",
-            description: "",
+            image: `${resources}/barcodeScannerResource/code93.jpg`,
+            description: "This symbol can withstand damage without causing loss of data.",
             checked: true
         },
         {
             name: "Data Matrix",
             type: "datamatrix",
-            image: "",
-            description: "",
+            image: `${resources}/barcodeScannerResource/datamatrix.jpg`,
+            description: "This symbol can withstand damage without causing loss of data.",
             checked: true
         },
         {
             name: "EAN-13",
             type: "ean13",
-            image: "",
-            description: "",
+            image: `${resources}/barcodeScannerResource/ean13.jpg`,
+            description: "The European Article Numbering System (EAN) is a superset consists of 13 numbers.",
             checked: true
         },
         {
             name: "EAN-8",
             type: "ean8",
-            image: "",
-            description: "",
+            image: `${resources}/barcodeScannerResource/ean8.jpg`,
+            description: "The European Article Numbering System (EAN) is a superset consists consists of 8 digits for small packages.",
             checked: true
         },
         {
             name: "ITF",
             type: "itf",
-            image: "",
-            description: "",
+            image: `${resources}/barcodeScannerResource/itf.jpg`,
+            description: "This symbol can withstand damage without causing loss of data.",
             checked: true
         },
         {
             name: "UPC-E",
             type: "upce",
-            image: "",
-            description: "",
+            image: `${resources}/barcodeScannerResource/upce.jpg`,
+            description: "This symbol can withstand damage without causing loss of data.",
             checked: true
         },
         {
             name: "Code 128",
             type: "code128",
-            image: "",
-            description: "",
+            image: `${resources}/barcodeScannerResource/code128.jpg`,
+            description: "This symbol can withstand damage without causing loss of data.",
             checked: true
         },
         {
             name: "PDF 417",
             type: "pdf417",
-            image: "",
-            description: "",
+            image: `${resources}/barcodeScannerResource/pdf417.jpg`,
+            description: "The PDF-417 symbology uses Reed Solomon error correction.",
             checked: true
         }
     ];

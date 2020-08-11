@@ -1,0 +1,10 @@
+table {
+    background-color: white;
+}
+td {
+    padding: 12px;
+    width: 20%;
+}
+.gray-border {
+    border: 1px solid lightgray;
+}

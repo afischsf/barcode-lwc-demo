@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <c-controls settings-data={settingData}></c-controls>
+        <c-controls onshowsettingsclick={settingsButtonPressed}></c-controls>
         <p class="slds-text-heading_large" style="margin: 12px">My Scans</p>
         <lightning-tabset active-tab-value={selectedTab}>
                 <lightning-tab label="Single Scans" value="single">
@@ -30,5 +30,9 @@
                 <lightning-button label="Multiple Item Scan" onclick={openMultiScan} class="slds-m-left_x-small">Multiple Item Scan</lightning-button>
             </div>
         </div>
+
+        <template if:true={showSettings}>
+            <c-scanner-settings settings={settings} onbackbuttonclick={settingsBackPressed} onsettingtoggled={settingToggled}></c-scanner-settings>
+        </template>
     </div>
 </template>

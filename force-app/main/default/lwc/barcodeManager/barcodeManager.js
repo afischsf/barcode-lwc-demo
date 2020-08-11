@@ -14,6 +14,8 @@ export default class NimbusBarcodeScanner extends LightningElement {
     screenNumber = "1";
     selectedTab = "multi";
 
+    showSettings = false;
+    
     detailType;
     @track detail;
     @track error;
@@ -42,7 +44,7 @@ export default class NimbusBarcodeScanner extends LightningElement {
         this.selectedTab = "single";
         if (this.barcodeScanner.isAvailable()) {
             this.barcodeScanner.beginCapture(
-                { barcodeTypes: [] }
+                { barcodeTypes: this.selectedBarcodeTypes() }
             )
             .then((barcode) => {
                 const last = this.last(this.singleScanRecords)
@@ -75,7 +77,7 @@ export default class NimbusBarcodeScanner extends LightningElement {
         this.selectedTab = "multi";
         if (this.barcodeScanner.isAvailable()) {
             this.barcodeScanner.beginCapture(
-                { barcodeTypes: [] }
+                { barcodeTypes: this.selectedBarcodeTypes() }
             )
             .then((barcode) => this.addMultiScannedBarcode(barcode))
             .catch(error => {
@@ -169,10 +171,109 @@ export default class NimbusBarcodeScanner extends LightningElement {
         this.detail[field] = event.target.value;
     }
 
+    settingsButtonPressed() {
+        this.showSettings = true;
+    }
+    
+    settingsBackPressed() {
+        this.showSettings = false;
+    }
+    
+    settingToggled(event) {
+        let index = this.settings.findIndex((x) => x.type == event.detail.type);
+        let item = Object.assign({}, this.settings[index]);
+        item.checked = event.detail.checked;
+        this.settings[index] = item;
+    }
+
     last(array) {
         if (array.length > 0)
             return array[array.length - 1];
 
         return undefined;
     }
+
+    selectedBarcodeTypes() {
+        return this.settings
+        .filter((item) => item.checked)
+        .map((item) => item.type);
+    }
+
+    get testing() {
+        let blah = { barcodeTypes: this.selectedBarcodeTypes() };
+        return JSON.stringify(blah);
+    }
+
+    settings = [
+        {
+            name: "QR Code",
+            type: "qr",
+            image: "",
+            description: "",
+            checked: true
+        },
+        {
+            name: "Code 39",
+            type: "code39",
+            image: "",
+            description: "",
+            checked: true
+        },
+        {
+            name: "Code 93",
+            type: "code93",
+            image: "",
+            description: "",
+            checked: true
+        },
+        {
+            name: "Data Matrix",
+            type: "datamatrix",
+            image: "",
+            description: "",
+            checked: true
+        },
+        {
+            name: "EAN-13",
+            type: "ean13",
+            image: "",
+            description: "",
+            checked: true
+        },
+        {
+            name: "EAN-8",
+            type: "ean8",
+            image: "",
+            description: "",
+            checked: true
+        },
+        {
+            name: "ITF",
+            type: "itf",
+            image: "",
+            description: "",
+            checked: true
+        },
+        {
+            name: "UPC-E",
+            type: "upce",
+            image: "",
+            description: "",
+            checked: true
+        },
+        {
+            name: "Code 128",
+            type: "code128",
+            image: "",
+            description: "",
+            checked: true
+        },
+        {
+            name: "PDF 417",
+            type: "pdf417",
+            image: "",
+            description: "",
+            checked: true
+        }
+    ];
 }

@@ -1,0 +1,19 @@
+<template>
+    <table>
+        <tr>
+            <td>
+                {setting.name}
+            </td>
+            <td>
+                <lightning-input 
+                    type="toggle"
+                    label=""
+                    name={setting.type} 
+                    checked={setting.checked}
+                    onchange={toggleChanged}>
+                </lightning-input>
+            </td>
+        </tr>
+    </table>
+    <div class="gray-border"></div>
+</template>

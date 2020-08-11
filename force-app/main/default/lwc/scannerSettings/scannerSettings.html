@@ -1,0 +1,19 @@
+<template>
+    <div style="background-color: white;">
+        <div class="back-button-container">
+            <lightning-button label="< Back" variant="base" onclick={backButtonPressed} class="slds-m-left_small settings-blue"></lightning-button>
+        </div>
+        <div style="padding: 12px;">
+            <p class="slds-text-heading--large" style="font-weight: bold;">Settings</p>
+            <p class="header-text">Select an option for your barcode type</p>
+        </div>
+        <div class="gray-border"></div>
+    </div>
+    <ul class="no-bullets">
+        <template iterator:it={settings}>
+            <li key={it.value.type}>
+                <c-settings-cell setting={it.value} onsettingtoggled={wasToggled}></c-settings-cell>
+            </li>
+        </template>
+    </ul>
+</template>

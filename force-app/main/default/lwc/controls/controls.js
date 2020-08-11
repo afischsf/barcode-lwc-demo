@@ -1,13 +1,18 @@
-import { LightningElement, api } from "lwc";
+import { LightningElement } from "lwc";
+
+const EVENT_SHOW_SETTINGS = "showsettingsclick";
 
 export default class Controls extends LightningElement {
-    @api settingsData;
 
     reloadPage() {
         window.location.reload();
     }
 
-    showSettingsPage(e) {
-
+    showSettingsPage() {
+        this.dispatchEvent(
+            new CustomEvent(
+                EVENT_SHOW_SETTINGS
+            )
+        );
     }
 }

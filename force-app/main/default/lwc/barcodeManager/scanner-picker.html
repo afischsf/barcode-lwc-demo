@@ -1,8 +1,9 @@
 <template>
     <div class="container">
-        <c-controls settings-data={settingData}></c-controls>
+        <c-controls onshowsettingsclick={settingsButtonPressed}></c-controls>
         <div class="center clear-it">
             <div class="slds-text-heading_large large-text">Barcode Scanner</div>
+            <p>{testing}</p>
             <img class="splash" src={splashLogo}>
             <div class="slds-text-body_regular medium-text">Add barcodes to new or existing records in just a few seconds</div>
             <div class="slds-text-body_small small-text">Which barcode scanner would you like to use?</div>
@@ -15,5 +16,9 @@
                 <lightning-button label="Multiple Item Scan" onclick={openMultiScan} class="slds-m-left_x-small">Multiple Item Scan</lightning-button>
             </div>
         </div>
+
+        <template if:true={showSettings}>
+            <c-scanner-settings settings={settings} onbackbuttonclick={settingsBackPressed} onsettingtoggled={settingToggled}></c-scanner-settings>
+        </template>
     </div>
 </template>

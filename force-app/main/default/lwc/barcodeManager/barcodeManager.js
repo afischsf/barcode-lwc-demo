@@ -204,49 +204,49 @@ export default class NimbusBarcodeScanner extends LightningElement {
             name: "QR Code",
             type: "qr",
             image: `${resources}/barcodeScannerResource/qr.jpg`,
-            description: "QR-Code (Quick Response) is a 2D barcode type similar to Data Matrix, capable of encoding large amounts of data.",
+            description: "QR-Code (Quick Response) is a 2D barcode type commonly used with mobile and smart-phone devices to direct users to additional information about a particular topic or product.",
             checked: true
         },
         {
             name: "Code 128",
             type: "code128",
             image: `${resources}/barcodeScannerResource/code128.jpg`,
-            description: "Code 128 is a high-density linear barcode symbology defined in ISO/IEC 15417:2007. It consists of alphanumeric or numeric-only barcodes and is used extensively worldwide in shipping and packaging industries as a product identification code for the container and pallet levels in the supply chain.",
+            description: "Code 128 consists of alphanumeric or numeric-only barcodes and is used extensively worldwide in shipping and packaging industries as a product identification code.",
             checked: true
         },
         {
             name: "Code 39",
             type: "code39",
             image: `${resources}/barcodeScannerResource/code39.jpg`,
-            description: "Code 39 is a common barcode type used for various labels such as name badges, inventory and industrial applications. The symbology of the Code 39 character set consists of barcode symbols representing numbers 0-9, upper-case letters A-Z, the space character and the following symbols: – . $ / + %.",
+            description: "Code 39 consists of barcode symbols representing numbers 0-9, upper-case letters A-Z, the space character and the following symbols: – . $ / + %. and is used for various labels such as name badges, inventory and industrial applications.",
             checked: true
         },
         {
             name: "Code 93",
             type: "code93",
             image: `${resources}/barcodeScannerResource/code93.jpg`,
-            description: "The Code 93 barcode is an updated, more secure and compact version of the Code 39 barcode, which is able to read both letters and numbers. It is used in the military and automotive fields, as well as by Canada Post to encode special delivery information.",
+            description: "The Code 93 barcode is an updated, more secure and compact version of the Code 39 barcode. It is used in the military, logistics and automotive fields to encode special delivery information.",
             checked: true
         },
         {
             name: "Data Matrix",
             type: "datamatrix",
             image: `${resources}/barcodeScannerResource/datamatrix.jpg`,
-            description: "A Data Matrix Code is a two-dimensional (2D) code that consists of black and white modules, usually arranged in a square pattern. An entire Data Matrix symbol can store up to 2,335 alphanumeric characters. Data Matrix symbols are often used for unique item identification.",
+            description: "A Data Matrix Code is a 2D code that consists of black and white modules, usually arranged in a square pattern. Data Matrix symbols are often used for unique item identification.",
             checked: true
         },
         {
             name: "EAN-13",
             type: "ean13",
             image: `${resources}/barcodeScannerResource/ean13.jpg`,
-            description: "The UPC and EAN barcodes have been in use since the 1970s to encode Global Trade Item Numbers (GTIN), which uniquely identify a product for retail checkout or tracking purposes. EAN-13 & GTIN-13 are UPC codes that have 13 characters in the symbol.",
+            description: "EAN-13 & GTIN-13 are UPC codes that have 13 characters used to encode Global Trade Item Numbers (GTIN), which uniquely identify a product for retail checkout or tracking purposes.",
             checked: true
         },
         {
             name: "EAN-8",
             type: "ean8",
             image: `${resources}/barcodeScannerResource/ean8.jpg`,
-            description: "The UPC and EAN barcodes have been in use since the 1970s to encode Global Trade Item Numbers (GTIN), which uniquely identify a product for retail checkout or tracking purposes. EAN-8 & GTIN-8 are UPC codes that have 8 characters in the symbol.",
+            description: "EAN-8 & GTIN-8 are UPC codes that have 8 characters used to encode Global Trade Item Numbers (GTIN), which uniquely identify a product for retail checkout or tracking purposes.",
             checked: true
         },
         {
@@ -260,7 +260,7 @@ export default class NimbusBarcodeScanner extends LightningElement {
             name: "UPC-E",
             type: "upce",
             image: `${resources}/barcodeScannerResource/upce.jpg`,
-            description: "UPC-E is a variation of UPC-A which allows for a more compact barcode by eliminating \"extra\" zeros. Since the resulting UPC-E barcode is about half the size as an UPC-A barcode, UPC-E is generally used on products with very small packaging where a full UPC-A barcode couldn't reasonably fit. UPC-E is often used in grocery stores and other retail establishments across the United States.",
+            description: "UPC-E is a variation of UPC-A generally used on products with very small packaging where a full UPC-A barcode couldn't reasonably fit. UPC-E is often used in grocery stores and other retail establishments across the United States.",
             checked: true
         },
         {

@@ -5,7 +5,7 @@
     width: 100%;
 }
 .gray-border {
-    border: 1pt solid lightgray;
+    border: 1pt solid #D8D8D8;
 }
 p {
     margin: 2px;

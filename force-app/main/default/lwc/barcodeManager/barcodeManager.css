@@ -9,7 +9,7 @@
     flex: 0.2;
 }
 .gray-border {
-    border: 1pt solid gray;
+    border: 1pt solid #D8D8D8;
 }
 .no-bullets {
     list-style-type: none;

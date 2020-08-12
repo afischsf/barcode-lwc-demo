@@ -18,3 +18,12 @@
     color: #706E6B;
     padding-top: 12px;
 }
+.container {
+    background-color: white;
+}
+.fit {
+    height: fit-content;
+}
+.bold {
+    font-weight: bold;
+}

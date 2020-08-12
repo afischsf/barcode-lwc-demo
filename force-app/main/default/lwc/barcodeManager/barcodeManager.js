@@ -204,70 +204,70 @@ export default class NimbusBarcodeScanner extends LightningElement {
             name: "QR Code",
             type: "qr",
             image: `${resources}/barcodeScannerResource/qr.jpg`,
-            description: "This symbol can withstand damage without causing loss of data.",
-            checked: true
-        },
-        {
-            name: "Code 39",
-            type: "code39",
-            image: `${resources}/barcodeScannerResource/code39.jpg`,
-            description: "This symbol can withstand damage without causing loss of data.",
-            checked: true
-        },
-        {
-            name: "Code 93",
-            type: "code93",
-            image: `${resources}/barcodeScannerResource/code93.jpg`,
-            description: "This symbol can withstand damage without causing loss of data.",
-            checked: true
-        },
-        {
-            name: "Data Matrix",
-            type: "datamatrix",
-            image: `${resources}/barcodeScannerResource/datamatrix.jpg`,
-            description: "This symbol can withstand damage without causing loss of data.",
-            checked: true
-        },
-        {
-            name: "EAN-13",
-            type: "ean13",
-            image: `${resources}/barcodeScannerResource/ean13.jpg`,
-            description: "The European Article Numbering System (EAN) is a superset consists of 13 numbers.",
-            checked: true
-        },
-        {
-            name: "EAN-8",
-            type: "ean8",
-            image: `${resources}/barcodeScannerResource/ean8.jpg`,
-            description: "The European Article Numbering System (EAN) is a superset consists consists of 8 digits for small packages.",
-            checked: true
-        },
-        {
-            name: "ITF",
-            type: "itf",
-            image: `${resources}/barcodeScannerResource/itf.jpg`,
-            description: "This symbol can withstand damage without causing loss of data.",
-            checked: true
-        },
-        {
-            name: "UPC-E",
-            type: "upce",
-            image: `${resources}/barcodeScannerResource/upce.jpg`,
-            description: "This symbol can withstand damage without causing loss of data.",
+            description: "QR-Code (Quick Response) is a 2D barcode type similar to Data Matrix, capable of encoding large amounts of data.",
             checked: true
         },
         {
             name: "Code 128",
             type: "code128",
             image: `${resources}/barcodeScannerResource/code128.jpg`,
-            description: "This symbol can withstand damage without causing loss of data.",
+            description: "Code 128 is a high-density linear barcode symbology defined in ISO/IEC 15417:2007. It consists of alphanumeric or numeric-only barcodes and is used extensively worldwide in shipping and packaging industries as a product identification code for the container and pallet levels in the supply chain.",
+            checked: true
+        },
+        {
+            name: "Code 39",
+            type: "code39",
+            image: `${resources}/barcodeScannerResource/code39.jpg`,
+            description: "Code 39 is a common barcode type used for various labels such as name badges, inventory and industrial applications. The symbology of the Code 39 character set consists of barcode symbols representing numbers 0-9, upper-case letters A-Z, the space character and the following symbols: – . $ / + %.",
+            checked: true
+        },
+        {
+            name: "Code 93",
+            type: "code93",
+            image: `${resources}/barcodeScannerResource/code93.jpg`,
+            description: "The Code 93 barcode is an updated, more secure and compact version of the Code 39 barcode, which is able to read both letters and numbers. It is used in the military and automotive fields, as well as by Canada Post to encode special delivery information.",
+            checked: true
+        },
+        {
+            name: "Data Matrix",
+            type: "datamatrix",
+            image: `${resources}/barcodeScannerResource/datamatrix.jpg`,
+            description: "A Data Matrix Code is a two-dimensional (2D) code that consists of black and white modules, usually arranged in a square pattern. An entire Data Matrix symbol can store up to 2,335 alphanumeric characters. Data Matrix symbols are often used for unique item identification.",
+            checked: true
+        },
+        {
+            name: "EAN-13",
+            type: "ean13",
+            image: `${resources}/barcodeScannerResource/ean13.jpg`,
+            description: "The UPC and EAN barcodes have been in use since the 1970s to encode Global Trade Item Numbers (GTIN), which uniquely identify a product for retail checkout or tracking purposes. EAN-13 & GTIN-13 are UPC codes that have 13 characters in the symbol.",
+            checked: true
+        },
+        {
+            name: "EAN-8",
+            type: "ean8",
+            image: `${resources}/barcodeScannerResource/ean8.jpg`,
+            description: "The UPC and EAN barcodes have been in use since the 1970s to encode Global Trade Item Numbers (GTIN), which uniquely identify a product for retail checkout or tracking purposes. EAN-8 & GTIN-8 are UPC codes that have 8 characters in the symbol.",
+            checked: true
+        },
+        {
+            name: "ITF",
+            type: "itf",
+            image: `${resources}/barcodeScannerResource/itf.jpg`,
+            description: "Interleaved 2 of 5 (ITF) is a numeric only barcode used to encode pairs of numbers into a self-checking, high-density barcode format. ITF is often used in the shipping and warehouse industries.",
+            checked: true
+        },
+        {
+            name: "UPC-E",
+            type: "upce",
+            image: `${resources}/barcodeScannerResource/upce.jpg`,
+            description: "UPC-E is a variation of UPC-A which allows for a more compact barcode by eliminating \"extra\" zeros. Since the resulting UPC-E barcode is about half the size as an UPC-A barcode, UPC-E is generally used on products with very small packaging where a full UPC-A barcode couldn't reasonably fit. UPC-E is often used in grocery stores and other retail establishments across the United States.",
             checked: true
         },
         {
             name: "PDF 417",
             type: "pdf417",
             image: `${resources}/barcodeScannerResource/pdf417.jpg`,
-            description: "The PDF-417 symbology uses Reed Solomon error correction.",
+            description: "PDF417 is a stacked linear barcode format used in a variety of applications such as transport, identification cards, and inventory management. \"PDF\" stands for Portable Data File.",
             checked: true
         }
     ];

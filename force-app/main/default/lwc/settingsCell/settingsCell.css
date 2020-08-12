@@ -10,7 +10,16 @@ td {
     border: 1px solid lightgray;
 }
 .barcode-image {
-    border: 1pt solid gray;
+    border: 1pt solid #D8D8D8;
     padding-top: 0;
     width: 80%;
+}
+.cell-desc {
+    font-size: 12px;
+    color: #706E6B;
+}
+.cell-title {
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
 }
